@@ -38,8 +38,8 @@ right_answer_style = """
  QLabel {
    color: white;
    background-color: green;
-   font-size: 100pt;
-   font-family: "DejaVu Sans Light";
+   font-size: 160pt;
+   font-family: "DejaVu Sans Mono";
    font-weight: bold;
 }"""
 
@@ -49,7 +49,7 @@ time_out_style = """
    background-color: Red;
    font-size: 120pt;
    font-family: "Purisa";
-   font-weight: italic;
+   font-weight: ;
 }"""
 
 import sys
@@ -87,7 +87,7 @@ class Timer():
         self.timer = QtCore.QTimer(interval=10)  # miliseconds
         self.timer.timeout.connect(self.on_every_second)
         self.wrongAnswer = False
-        self.wrongCounter = 20
+        self.wrongCounter = 12
 
 
     def on_every_second(self):
@@ -98,15 +98,15 @@ class Timer():
         else:
             if self.wrongAnswer == True:
                 if self.wrongCounter <= 0:
-                    self.wrongCounter = 20
+                    self.wrongCounter = 12
                     self.wrongAnswer = False
                     self.currentState = self.countdown
-                elif int(self.wrongCounter) % 3 == 1:
+                elif int(self.wrongCounter) % 2 == 1:
                     self.currentState = self.wrong_answer_negativ
-                    self.wrongCounter -= 1 / 20
+                    self.wrongCounter -= 1 / 27
                 else:
                     self.currentState = self.wrong_answer
-                    self.wrongCounter -= 1 / 20
+                    self.wrongCounter -= 1 / 27
             self.currentState()
 
     # Key-Press-Methods
@@ -159,21 +159,21 @@ class Timer():
     def wrong_answer(self):
         self.label.setStyleSheet(wrong_answer_style)
         if self.timePunishment > 0:
-            self.label.setText("Wrong password!!!\n-%02d:%02d:%02d" % self.convertTime(self.timePunishment))
+            self.label.setText("WRONG PASSWORD\n-%02d:%02d:%02d" % self.convertTime(self.timePunishment))
         else:
-            self.label.setText("Wrong password!!!")
+            self.label.setText("WRONG PASSWORD")
 
     def wrong_answer_negativ(self):
         self.label.setStyleSheet(wrong_answer_style2)
-        self.label.setText("Wrong password!!!\n-%02d:%02d:%02d" % self.convertTime(self.timePunishment))
+        self.label.setText("WRONG PASSWORD\n-%02d:%02d:%02d" % self.convertTime(self.timePunishment))
 
     def right_answer(self):
         self.label.setStyleSheet(right_answer_style)
-        self.label.setText("Right password!!!")
+        self.label.setText("ABORDTED")
 
     def timeout(self):
         self.label.setStyleSheet(time_out_style)
-        self.label.setText("Time is up,\n you lost!!!")
+        self.label.setText("DETONATION")
 
 
 def main(argv):
