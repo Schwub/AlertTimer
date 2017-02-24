@@ -1,5 +1,6 @@
 missing module named PySide - imported by /usr/local/lib/python3.5/dist-packages/PyInstaller/loader/rthooks/pyi_rth_qt4plugins.py
 missing module named 'org.python' - imported by pickle, /home/schwub/Projekte/AlertTimer/TimerSetup.py, xml.sax
+missing module named ce - imported by os, /home/schwub/Projekte/AlertTimer/TimerSetup.py
 excluded module named _frozen_importlib - imported by importlib, importlib.abc, /home/schwub/Projekte/AlertTimer/TimerSetup.py
 missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, /home/schwub/Projekte/AlertTimer/TimerSetup.py
 missing module named _winreg - imported by platform, /home/schwub/Projekte/AlertTimer/TimerSetup.py
@@ -7,13 +8,12 @@ missing module named _scproxy - imported by urllib.request
 missing module named java - imported by platform, /home/schwub/Projekte/AlertTimer/TimerSetup.py
 missing module named 'java.lang' - imported by platform, /home/schwub/Projekte/AlertTimer/TimerSetup.py, xml.sax._exceptions
 missing module named vms_lib - imported by platform, /home/schwub/Projekte/AlertTimer/TimerSetup.py
-missing module named winreg - imported by platform, mimetypes, /home/schwub/Projekte/AlertTimer/TimerSetup.py, urllib.request
-missing module named org - imported by copy, /home/schwub/Projekte/AlertTimer/TimerSetup.py
-missing module named nt - imported by os, ntpath, shutil, /home/schwub/Projekte/AlertTimer/TimerSetup.py
-missing module named ce - imported by os, /home/schwub/Projekte/AlertTimer/TimerSetup.py
 missing module named msvcrt - imported by subprocess, /home/schwub/Projekte/AlertTimer/TimerSetup.py, getpass
 missing module named _winapi - imported by subprocess, /home/schwub/Projekte/AlertTimer/TimerSetup.py
+missing module named winreg - imported by platform, mimetypes, /home/schwub/Projekte/AlertTimer/TimerSetup.py, urllib.request
 missing module named _dummy_threading - imported by dummy_threading, /home/schwub/Projekte/AlertTimer/TimerSetup.py
+missing module named nt - imported by os, ntpath, shutil, /home/schwub/Projekte/AlertTimer/TimerSetup.py
+missing module named org - imported by copy, /home/schwub/Projekte/AlertTimer/TimerSetup.py
 missing module named 'PyQt4.elementtree' - imported by PyQt4.uic.uiparser
 missing module named elementtree - imported by PyQt4.uic.uiparser
 missing module named ElementTree - imported by PyQt4.uic.uiparser
