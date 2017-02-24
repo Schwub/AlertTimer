@@ -54,7 +54,7 @@ time_out_style = """
 
 import sys
 from PyQt4 import QtCore, QtGui
-import time
+
 
 
 class ActiveLabel(QtGui.QLabel):

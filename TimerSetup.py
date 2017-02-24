@@ -1,6 +1,8 @@
 import sys
 from PyQt4 import QtCore, QtGui, uic
 from alertTimer import *
+from webbrowser import open
+
 class timerSetup(QtGui.QDialog):
     def __init__(self):
         self.app = QtGui.QApplication(sys.argv)
@@ -9,7 +11,11 @@ class timerSetup(QtGui.QDialog):
         self.ui.show()
         #Buttons
         self.connect(self.ui.pushButtonStart, QtCore.SIGNAL("clicked()"), self.start)
+        self.connect(self.ui.pushButtonReadMe, QtCore.SIGNAL("clicked()"), self.readme)
         sys.exit(self.app.exec_())
+
+    def readme(self):
+        open("readme.html")
 
     def start(self):
         totaltime = self.ui.timeEdit2.time().hour() * 3600
