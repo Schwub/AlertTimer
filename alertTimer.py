@@ -1,6 +1,6 @@
 standby_style = """
  QLabel {
-   color: #101010;
+   color: #121212;
    background-color: black;
    font-size: 180pt;
    font-family: "DejaVu Sans Mono";
@@ -169,7 +169,7 @@ class Timer():
 
     def right_answer(self):
         self.label.setStyleSheet(right_answer_style)
-        self.label.setText("ABORDTED")
+        self.label.setText("ABORTED")
 
     def timeout(self):
         self.label.setStyleSheet(time_out_style)
